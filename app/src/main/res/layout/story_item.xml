@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/unseenStory_Id"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_5sdp"
+        android:src="@drawable/face"
+        app:civ_border_color="@color/red"
+        app:civ_border_width="@dimen/_2sdp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/seenStory_Id"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_5sdp"
+        android:src="@drawable/face"
+        android:visibility="gone"
+        app:civ_border_color="@color/grey"
+        app:civ_border_width="@dimen/_2sdp" />
+
+    <TextView
+        android:id="@+id/storyProName_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Huzaifa Ahmed"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold" />
+
+</LinearLayout>

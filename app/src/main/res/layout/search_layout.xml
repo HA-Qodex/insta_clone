@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp"
+    android:layout_marginStart="@dimen/_20sdp"
+    android:layout_marginEnd="@dimen/_20sdp"
+    android:padding="@dimen/_5sdp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/searchProfile_Id"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/ic_instagram_logo"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_toRightOf="@id/searchProfile_Id"
+        >
+
+        <TextView
+            android:id="@+id/searchName_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huzaifa Ahmed"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/searchEmail_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="huzaifa@gmail.com"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/followButton_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Follow"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_12ssp"/>
+
+</RelativeLayout>

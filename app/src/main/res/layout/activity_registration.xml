@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegistrationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_30sdp">
+
+        <ImageView
+            android:id="@+id/reg_logo_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:src="@drawable/ic_instagram_title" />
+
+        <TextView
+            android:id="@+id/reg_title_Id"
+            android:layout_width="@dimen/_190sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reg_logo_Id"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/alike"
+            android:text="Sign in to see photos and videos from your friends."
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/reg_name_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/reg_title_Id"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/alike"
+            android:hint="Name"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/reg_phone_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/reg_name_Id"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/alike"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/reg_email_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/reg_phone_Id"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/alike"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/reg_pass_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/reg_email_Id"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/alike"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/reg_button_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/reg_pass_Id"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/alike"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/reg_loading_anim_Id"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_progress="@integer/google_play_services_version"
+            app:lottie_rawRes="@raw/instagram_anim"
+            app:lottie_renderMode="automatic"
+            app:lottie_repeatMode="restart" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reg_button_Id"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_100sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alike"
+                android:text="Already have an account?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/reg_to_login_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alike"
+                android:text=" Log in"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

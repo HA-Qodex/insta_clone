@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CameraActivity">
+
+    <RelativeLayout
+        android:id="@+id/topBar_Id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10ssp"
+        >
+
+        <ImageView
+            android:id="@+id/cancelButton_Id"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_baseline_close_24"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Post"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/_17ssp"
+            android:layout_toRightOf="@id/cancelButton_Id"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/postButton_Id"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_baseline_right"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/postImage_Id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_below="@id/topBar_Id"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="@dimen/_20sdp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/loadingAnim_Id"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardBackgroundColor="#B7FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerInParent="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_progress="@integer/google_play_services_version"
+                app:lottie_rawRes="@raw/instagram_loading"
+                app:lottie_renderMode="automatic"
+             />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/postDes_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postImage_Id"
+        android:hint="Description"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10ssp"
+        android:layout_marginTop="@dimen/_30sdp"/>
+
+
+</RelativeLayout>

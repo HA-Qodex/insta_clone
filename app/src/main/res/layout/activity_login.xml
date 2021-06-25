@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_30sdp">
+
+        <ImageView
+            android:id="@+id/login_logo_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:src="@drawable/ic_instagram_title" />
+
+        <TextView
+            android:id="@+id/login_title_Id"
+            android:layout_width="@dimen/_190sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/login_logo_Id"
+            android:fontFamily="@font/alike"
+            android:text="Sign in to see photos and videos from your friends."
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/login_email_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/login_title_Id"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/alike"
+            android:hint="Phone no, email or username"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <EditText
+            android:id="@+id/login_pass_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/login_email_Id"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/alike"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingEnd="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logIn_button_Id"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/login_pass_Id"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/alike"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/login_loading_anim_Id"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_progress="@integer/google_play_services_version"
+            app:lottie_rawRes="@raw/instagram_anim"
+            app:lottie_renderMode="automatic"
+            app:lottie_repeatMode="restart" />
+
+
+        <LinearLayout
+            android:id="@+id/login_help_Id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logIn_button_Id"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alike"
+                android:text="Forgot your login details?"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alike"
+                android:text=" Get help sign in"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_divider_Id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_help_Id"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/alike"
+                android:text="OR"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:background="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/login_fb_Id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_divider_Id"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:src="@drawable/ic_facebook" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="Connect with Facebook"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_fb_Id"
+            android:layout_marginTop="@dimen/_100sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alike"
+                android:text="Don't have an account?"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/signUp_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alike"
+                android:text=" Sign up"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</ScrollView>

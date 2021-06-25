@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/postProImage_Id"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/face" />
+
+        <TextView
+            android:id="@+id/postProName_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/postProImage_Id"
+            android:text="Huzaifa Ahmed"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/dotMenu_Id"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_menu" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/postImageView_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/postLike_Id"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_heart" />
+
+        <ImageView
+            android:id="@+id/postComment_Id"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_toEndOf="@id/postLike_Id"
+            android:src="@drawable/ic_comment"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/postShare_Id"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_toEndOf="@id/postComment_Id"
+            android:src="@drawable/ic_send"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/save_Id"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/ic_save"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/postLikeCount_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="2,875 Likes"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/postDesc_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/postCommentText_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:text="View all 27 comments"
+        android:textColor="#B6B6B6"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

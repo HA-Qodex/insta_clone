@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CommentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/commentToolbar_Id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/arsenal"
+                android:text="Comments"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/commentShare_Id"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:src="@drawable/ic_send" />
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentRecycler_Id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/commentBox_Id"
+        android:layout_below="@id/commentToolbar_Id"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp" />
+
+    <RelativeLayout
+        android:id="@+id/commentBox_Id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/commentProPic_Id"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:src="@drawable/face" />
+
+        <EditText
+            android:id="@+id/commentText_Id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_toStartOf="@id/postButton_Id"
+            android:layout_toEndOf="@id/commentProPic_Id"
+            android:background="@color/transparent"
+            android:hint="Write your comment"
+            android:textSize="@dimen/_15ssp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:outlineProvider="none" />
+
+        <TextView
+            android:id="@+id/postButton_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Post"
+            android:textColor="#4122FF"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginEnd="@dimen/_15sdp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
